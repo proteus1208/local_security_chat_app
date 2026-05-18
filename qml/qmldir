@@ -1,0 +1,19 @@
+module qml
+Main 1.0 Main.qml
+Content 1.0 Layouts\Content.qml
+Footer 1.0 Layouts\Footer.qml
+Home 1.0 Pages\Home.qml
+Settings 1.0 Pages\Settings.qml
+ToastView 1.0 Service\ToastView.qml
+App 1.0 store\App.qml
+Auth 1.0 store\Auth.qml
+Toast 1.0 store\Toast.qml
+Theme 1.0 theme\Theme.qml
+Avatar 1.0 Components\Common\Avatar.qml
+Chat 1.0 Layouts\Chat\Chat.qml
+Header 1.0 Layouts\Header\Header.qml
+Logo 1.0 Layouts\Header\Logo.qml
+Menu 1.0 Layouts\Menu\Menu.qml
+Avatar 1.0 Components\Common\Avatar\Avatar.qml
+Button 1.0 Components\Common\Button\Button.qml
+IconButton 1.0 Components\Common\Button\IconButton.qml

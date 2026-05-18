@@ -1,0 +1,20 @@
+module LearnQML
+teset 1.0 teset.qml
+Main 1.0 qml\Main.qml
+Content 1.0 qml\Layouts\Content.qml
+Footer 1.0 qml\Layouts\Footer.qml
+Home 1.0 qml\Pages\Home.qml
+Settings 1.0 qml\Pages\Settings.qml
+ToastView 1.0 qml\Service\ToastView.qml
+App 1.0 qml\store\App.qml
+Auth 1.0 qml\store\Auth.qml
+Toast 1.0 qml\store\Toast.qml
+Theme 1.0 qml\theme\Theme.qml
+Avatar 1.0 qml\Components\Common\Avatar.qml
+Chat 1.0 qml\Layouts\Chat\Chat.qml
+Header 1.0 qml\Layouts\Header\Header.qml
+Logo 1.0 qml\Layouts\Header\Logo.qml
+Menu 1.0 qml\Layouts\Menu\Menu.qml
+Avatar 1.0 qml\Components\Common\Avatar\Avatar.qml
+Button 1.0 qml\Components\Common\Button\Button.qml
+IconButton 1.0 qml\Components\Common\Button\IconButton.qml

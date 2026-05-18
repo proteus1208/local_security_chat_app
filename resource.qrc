@@ -1,0 +1,44 @@
+<RCC>
+    <qresource prefix="/">
+        <file>qml/Main.qml</file>
+        <file>qml/Layouts/Content.qml</file>
+        <file>qml/Layouts/Footer.qml</file>
+        <file>qml/assets/icons/bell.png</file>
+        <file>qml/assets/icons/bell.psd</file>
+        <file>qml/assets/icons/home.png</file>
+        <file>qml/assets/icons/home.psd</file>
+        <file>qml/assets/icons/setting.png</file>
+        <file>qml/assets/icons/setting.psd</file>
+        <file>qml/assets/logo/logo.png</file>
+        <file>qml/assets/logo/logo.psd</file>
+        <file>qml/assets/icons.png</file>
+        <file>qml/Components/Common/Button/Button.qml</file>
+        <file>qml/Components/Common/Button/IconButton.qml</file>
+        <file>qml/Components/Common/Avatar.qml</file>
+        <file>qml/Layouts/Chat/Chat.qml</file>
+        <file>qml/Layouts/Header/Header.qml</file>
+        <file>qml/Layouts/Header/Icon-Bell.psd</file>
+        <file>qml/Layouts/Header/Logo.qml</file>
+        <file>qml/Layouts/Menu/Menu.qml</file>
+        <file>qml/Pages/Home.qml</file>
+        <file>qml/Pages/Settings.qml</file>
+        <file>qml/store/App.qml</file>
+        <file>qml/store/Auth.qml</file>
+        <file>qml/store/qmldir</file>
+        <file>qml/theme/qmldir</file>
+        <file>qml/theme/Theme.qml</file>
+        <file>qml/qmldir</file>
+        <file>qml/assets/icons/check.png</file>
+        <file>qml/assets/icons/check.psd</file>
+        <file>qml/assets/icons/error.png</file>
+        <file>qml/assets/icons/error.psd</file>
+        <file>qml/assets/icons/warn.png</file>
+        <file>qml/assets/icons/warn.psd</file>
+        <file>qml/assets/design-1.png</file>
+        <file>qml/assets/icons-1.png</file>
+        <file>qml/assets/icons-2.png</file>
+        <file>qml/assets/icons-3.png</file>
+        <file>qml/Service/ToastView.qml</file>
+        <file>qml/store/Toast.qml</file>
+    </qresource>
+</RCC>

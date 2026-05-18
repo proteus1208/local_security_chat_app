@@ -29,7 +29,7 @@ if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
     qt_add_executable(LearnQML
         MANUAL_FINALIZATION
         ${PROJECT_SOURCES}
-        resource.qrc
+        app.rc
     )
 # Define target properties for Android with Qt 6 as:
 #    set_property(TARGET LearnQML APPEND PROPERTY QT_ANDROID_PACKAGE_SOURCE_DIR
@@ -81,3 +81,13 @@ install(TARGETS LearnQML
 if(QT_VERSION_MAJOR EQUAL 6)
     qt_finalize_executable(LearnQML)
 endif()
+
+file(GLOB_RECURSE QML_FILES RELATIVE ${CMAKE_CURRENT_SOURCE_DIR}
+    CONFIGURE_DEPENDS
+    qml/*
+)
+
+qt_add_resources(LearnQML "resources"
+    PREFIX "/"
+    FILES ${QML_FILES}
+)

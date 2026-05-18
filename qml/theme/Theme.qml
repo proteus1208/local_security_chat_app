@@ -12,39 +12,23 @@ QtObject {
 
     // Base
     property var layout: QtObject {
-        property color bgMain: "#14151C"
-        property color bgSidebar: "#1C1F28"
-        property color bgContent: "#1C1F28"
-        property color bgHeader: "#191B24"
-        property color bgFooter: "#191B24"
+        property color bgMain: "#F5F7FB"
+        property color bgSidebar: "#FFFFFF"
+        property color bgContent: "#FFFFFF"
+        property color bgHeader: "#FFFFFF"
+        property color bgFooter: "#FFFFFF"
 
-        property color border: '#323542'
+        property color border: "#D9DEE8"
 
         property var menu: QtObject {
             property color activeColor: "#2E68D5"
         }
     }
 
-    // property var color: QtObject {
-    //     // Accent
-    //     property color accent: "#3b82f6"
-
-    //     // States
-    //     property color hoverColor: "#1e3a8a"
-    //     property color activeColor: "#2E68D5"
-
-    //     property color primary: "#4CAF50"
-    //     property color secondary: "#2196F3"
-    //     property color background: "#f5f5f5"
-
-    //     property color border: "#e0e0e0"
-    //     property color danger: "#f44336"
-    // }
-
     property var text: QtObject {
-        property color primary: "#e5e7eb"
-        property color secondary: "#9ca3af"
-        property color white: "white"
+        property color primary: "#1F2937"
+        property color secondary: "#6B7280"
+        property color white: "#FFFFFF"
 
         property int small: 12
         property int normal: 14

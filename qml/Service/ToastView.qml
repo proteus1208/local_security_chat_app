@@ -30,7 +30,7 @@ Item {
 
             width: listView.width
             radius: Theme.radiusSize.large
-            color: "#d31a282f"
+            color: '#d3cbeeff'
 
             // Use explicit height, not only implicitHeight
             height: Math.max(45, textItem.implicitHeight) + Theme.sm * 2
@@ -46,6 +46,7 @@ Item {
                     Layout.preferredWidth: visible ? 45 : 0
                     Layout.preferredHeight: visible ? 45 : 0
                     smooth: true
+                    mipmap: true
                 }
 
                 Text {
@@ -67,7 +68,6 @@ Item {
                     Text {
                         anchors.centerIn: parent
                         text: "✕"
-                        color: "white"
                         font.pointSize: Theme.text.small
                     }
 

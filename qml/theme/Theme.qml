@@ -21,7 +21,7 @@ QtObject {
         property color border: "#D9DEE8"
 
         property var menu: QtObject {
-            property color activeColor: "#2E68D5"
+            property color activeColor: "#eeeeee"
         }
     }
 
@@ -30,9 +30,11 @@ QtObject {
         property color secondary: "#6B7280"
         property color white: "#FFFFFF"
 
-        property int small: 12
-        property int normal: 14
-        property int large: 18
+        property int verySamll: 8
+        property int small: 10
+        property int normal: 12
+        property int large: 14
+        property int veryLarge: 18
     }
 
     property var radiusSize: QtObject {

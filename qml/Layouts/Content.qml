@@ -14,10 +14,10 @@ Rectangle {
     radius: Theme.radiusSize.normal
 
     function loadCurrentPage() {
-        const pageSource = "../Pages/" + currentPage + ".qml"
+        // const pageSource = "../Pages/" + currentPage + ".qml"
 
-        loader.source = ""          // clear old source first
-        loader.setSource(pageSource)
+        // loader.source = ""          // clear old source first
+        // loader.setSource(pageSource)
     }
 
     onCurrentPageChanged: {

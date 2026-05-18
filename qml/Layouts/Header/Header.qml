@@ -3,6 +3,7 @@ import QtQuick.Controls
 import QtQuick.Layouts
 import "../../theme"
 import "../../Components/Common/Button"
+// import "./UserButton"
 
 Rectangle {
     color: Theme.layout.bgHeader
@@ -19,19 +20,23 @@ Rectangle {
         Text {
             color: Theme.text.primary
             text: "SChat"
-            font.pointSize: 14
+            font.pointSize: Theme.text.small
         }
 
         Item {
             Layout.fillWidth: true
         }
 
-        IconButton {
-            // Resolved from IconButton.qml’s location, not Header.qml
-            iconSource: "../../../assets/icons/bell.png"
-            size: 30
-            badge: 156123
+        UserButton{
             Layout.rightMargin: Theme.sm
         }
+
+        // IconButton {
+        //     // Resolved from IconButton.qml’s location, not Header.qml
+        //     iconSource: "../../../assets/icons/bell.png"
+        //     size: 30
+        //     badge: 156123
+        //     Layout.rightMargin: Theme.sm
+        // }
     }
 }

@@ -2,9 +2,9 @@ pragma Singleton
 import QtQuick
 
 QtObject {
-    property string currentPage: "Home"
+    property string currentPage: ""
 
-    function navigate(newPage) {
-        currentPage = newPage;
+    function navigate(newUser) {
+        currentPage = newUser;
     }
 }

@@ -2,6 +2,7 @@ import QtQuick
 import QtQuick.Controls
 import "../../theme"
 import "../../store"
+import "../../Components/Common/Avatar"
 
 Rectangle {
     id: root
@@ -12,25 +13,15 @@ Rectangle {
     property int current_width: isExpanded ? min_width_Expanded * 2 : width_Collapsed
     property string currentPage: App.currentPage
 
-    property var menuItems: [
-        {
-            pageName: "Home",
-            icon: "../../assets/icons/home.png"
-        },
-        {
-            pageName: "Add User",
-            icon: "../../assets/icons/home.png"
-        },
+    property var users: [
         ...Array.from({
             length: 5
         }, (_, index) => ({
-                    pageName: "User " + index,
-                    icon: "../../assets/icons/bell.png"
+                    uuid: "User " + index,
+                    name: "User " + index,
+                    avatar: "",
+                    live: false
                 })),
-        {
-            pageName: "Settings",
-            icon: "../../assets/icons/setting.png"
-        }
     ]
 
     width: current_width
@@ -48,7 +39,7 @@ Rectangle {
         clip: true
         ListView {
             id: list
-            model: menuItems
+            model: users
             anchors.fill: parent
             spacing: Theme.xs
             topMargin: Theme.sm
@@ -60,23 +51,25 @@ Rectangle {
                 id: control
                 width: parent? parent.width : 0
                 height: root.itemHeight
-                color: mouseArea.pressed ? '#3f69ff' : currentPage == modelData.pageName ? Theme.layout.menu.activeColor : mouseArea.containsMouse ? '#2fffffff' : "transparent"
+                color: item_mouseArea.pressed ? '#dfdfdf' : currentPage == modelData.uuid ? Theme.layout.menu.activeColor : item_mouseArea.containsMouse ? '#dfdfdf' : "transparent"
                 radius: Theme.radiusSize.normal
                 Row {
                     padding: Theme.xs
                     spacing: Theme.xs
-                    Image {
-                        width: control.height - Theme.xs * 2
-                        height: control.height - Theme.xs * 2
-                        source: modelData.icon
+                    Avatar {
+                        uuid: modelData.uuid
+                        name: modelData.name
+                        live: true
+                        image_base64: modelData.avatar
+                        size: control.height - Theme.xs * 2
                     }
 
                     Text {
                         visible: root.isExpanded
                         color: Theme.text.primary
                         anchors.verticalCenter: parent.verticalCenter
-                        text: modelData.pageName
-                        font.pointSize: Theme.text.normal
+                        text: modelData.name
+                        font.pointSize: Theme.text.small
                         width: control.width - root.itemHeight
                         elide: Text.ElideRight
                         // maximumLineCount: 1
@@ -84,13 +77,13 @@ Rectangle {
                 }
 
                 MouseArea {
-                    id: mouseArea
+                    id: item_mouseArea
                     anchors.fill: parent
                     hoverEnabled: true
                     cursorShape: Qt.PointingHandCursor
 
                     onClicked: mouse => {
-                        App.navigate(modelData.pageName);
+                        App.navigate(modelData.uuid);
                     }
                 }
             }

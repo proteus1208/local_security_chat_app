@@ -3,6 +3,10 @@
 
 #include <QMainWindow>
 
+#include <QSystemTrayIcon>
+#include <QMenu>
+#include <QAction>
+
 QT_BEGIN_NAMESPACE
 namespace Ui {
 class MainWindow;
@@ -19,5 +23,15 @@ public:
 
 private:
     Ui::MainWindow *ui;
+
+    void closeEvent(QCloseEvent *);
+
+    // tray icon
+    QSystemTrayIcon *m_tray;
+    QMenu *m_menu;
+    QAction *m_action_show;
+    QAction *m_action_close;
+
+    void exit();
 };
 #endif // MAINWINDOW_H

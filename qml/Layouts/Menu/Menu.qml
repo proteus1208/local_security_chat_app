@@ -17,10 +17,14 @@ Rectangle {
             pageName: "Home",
             icon: "../../assets/icons/home.png"
         },
+        {
+            pageName: "Add User",
+            icon: "../../assets/icons/home.png"
+        },
         ...Array.from({
-            length: 20
+            length: 5
         }, (_, index) => ({
-                    pageName: "Item " + index,
+                    pageName: "User " + index,
                     icon: "../../assets/icons/bell.png"
                 })),
         {

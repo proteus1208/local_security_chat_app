@@ -1,6 +1,7 @@
 import QtQuick
 import QtQuick.Controls
 import QtQuick.Layouts
+import QtQuick.Window
 import "theme"
 import "store"
 
@@ -30,6 +31,7 @@ Rectangle {
             spacing: Theme.sm
             Layout.fillWidth: true
             Layout.fillHeight: true
+            Layout.bottomMargin: Theme.sm
 
             Menu {
                 id: menu
@@ -41,20 +43,21 @@ Rectangle {
             Content {
                 Layout.fillWidth: true
                 Layout.fillHeight: true
-            }
-
-            Chat {
-                id: chat
-                Layout.preferredWidth: chat.width
-                Layout.fillHeight: true
                 Layout.rightMargin: Theme.sm
             }
+
+            // Chat {
+            //     id: chat
+            //     Layout.preferredWidth: chat.width
+            //     Layout.fillHeight: true
+            //     Layout.rightMargin: Theme.sm
+            // }
         }
 
-        Footer {
-            Layout.fillWidth: true
-            Layout.preferredHeight: 50
-        }
+        // Footer {
+        //     Layout.fillWidth: true
+        //     Layout.preferredHeight: 50
+        // }
     }
 
     ToastView {

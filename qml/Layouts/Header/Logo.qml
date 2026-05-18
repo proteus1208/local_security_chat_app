@@ -5,6 +5,8 @@ Item {
     Image {
         anchors.fill: parent
         source: "../../assets/logo/logo.png"
-        fillMode: Image.PreserveAspectCrop
+        fillMode: Image.PreserveAspectFit
+        smooth: true
+        mipmap: true
     }
 }

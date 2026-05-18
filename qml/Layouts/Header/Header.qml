@@ -11,14 +11,14 @@ Rectangle {
     RowLayout {
         anchors.fill: parent
         Logo {
-            Layout.preferredWidth: 40
-            Layout.preferredHeight: 40
+            Layout.preferredWidth: 32
+            Layout.preferredHeight: 32
             Layout.leftMargin: Theme.sm
         }
 
         Text {
             color: Theme.text.primary
-            text: "My Custom Window Theme"
+            text: "SChat"
             font.pointSize: 14
         }
 

@@ -33,6 +33,7 @@ if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
         qml/Layouts/Header/UserButton.qml
         crypto.h crypto.cpp
         consts.h
+        qml/Components/Common/Input/Input.qml
     )
 # Define target properties for Android with Qt 6 as:
 #    set_property(TARGET LearnQML APPEND PROPERTY QT_ANDROID_PACKAGE_SOURCE_DIR

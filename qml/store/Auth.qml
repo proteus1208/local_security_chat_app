@@ -3,6 +3,8 @@ import QtQuick
 
 QtObject {
     property var state: QtObject {
-        property string test: "test"
+        property string name: "Demon"
+        property string avatar: ""
+        property string uuid: "demon"
     }
 }

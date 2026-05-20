@@ -10,6 +10,7 @@ import "./Layouts/Header"
 import "./Layouts/Menu"
 import "./Layouts/Chat"
 import "./Service"
+import "./Dialogs"
 
 Rectangle {
     id: root
@@ -59,15 +60,12 @@ Rectangle {
         //     Layout.preferredHeight: 50
         // }
     }
+    UserInfoDialog {
+        parent: Overlay.overlay
+    }
 
     ToastView {
         anchors.fill: parent
     }
 
-    Item {
-        id: popupLayer
-        anchors.fill: parent
-        // color: "#1a000000"
-        // z: 1000
-    }
 }

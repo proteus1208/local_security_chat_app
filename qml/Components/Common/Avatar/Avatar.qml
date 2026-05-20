@@ -9,7 +9,7 @@ Item {
     property string image_base64: ""
     property string name: ""
     property string uuid: ""
-    property bool live: false
+    property var live: null
 
     width: size
     height: size
@@ -62,6 +62,7 @@ Item {
         width: root.size * 0.28
         height: width
         radius: width / 2
+        visible: live !== null
 
         anchors.right: parent.right
         anchors.bottom: parent.bottom

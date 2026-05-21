@@ -50,8 +50,8 @@ Popup {
         Rectangle {
             id: box
 
-            width: Math.min(root.modalWidth, root.width * 0.9)
-            height: Math.min(root.modalHeight, root.height * 0.9)
+            width: Math.min(root.modalWidth, root.width * 0.95)
+            height: Math.min(root.modalHeight, root.height * 0.95)
 
             anchors.centerIn: parent
 
@@ -65,6 +65,7 @@ Popup {
                 anchors.fill: parent
                 anchors.margins: Theme.md
                 clip: true
+                padding: 8
 
                 Loader {
                     id: contentItemLoader

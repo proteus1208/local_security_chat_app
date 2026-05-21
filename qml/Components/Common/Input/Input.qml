@@ -1,6 +1,8 @@
 import QtQuick
 import QtQuick.Controls as QQC
 
+import "../../../theme"
+
 Item {
     id: root
 
@@ -22,7 +24,7 @@ Item {
     signal editingFinished()
 
     implicitWidth: 280
-    implicitHeight: errorText.length > 0 ? 76 : 58
+    implicitHeight: errorText.length > 0 ? 66 : 48
 
     readonly property bool active: input.activeFocus || input.text.length > 0
     readonly property color activeColor: error ? errorColor : focusColor
@@ -33,12 +35,12 @@ Item {
         anchors.left: parent.left
         anchors.right: parent.right
         anchors.top: parent.top
-        height: 48
+        height: 38
 
         enabled: !root.disabled
 
         color: root.disabled ? root.disabledColor : root.textColor
-        font.pixelSize: 15
+        font.pixelSize: Theme.text.normal
 
         topPadding: 16
         leftPadding: 0
@@ -71,7 +73,7 @@ Item {
             return root.normalColor
         }
 
-        font.pixelSize: root.active ? 12 : 15
+        font.pixelSize: root.active ? Theme.text.small : Theme.text.normal
 
         Behavior on y {
             NumberAnimation { duration: 140; easing.type: Easing.OutCubic }
@@ -125,11 +127,11 @@ Item {
         anchors.left: parent.left
         anchors.right: parent.right
         anchors.top: bottomLine.bottom
-        anchors.topMargin: 6
+        anchors.topMargin: Theme.xs
 
         text: root.errorText
         color: root.errorColor
-        font.pixelSize: 12
+        font.pixelSize: Theme.text.normal
         elide: Text.ElideRight
     }
 }

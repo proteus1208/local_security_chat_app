@@ -8,12 +8,14 @@ import "../Components/Common/Input"
 import "../Components/Common/Button"
 import "../store"
 
+import "../theme"
+
 Modal {
     id: root
 
     show: App.userInfoEditModal_show
     modalWidth: 420
-    modalHeight: 560
+    modalHeight: 460
 
     visible: App.userInfoEditModal_show
 
@@ -42,11 +44,11 @@ Modal {
 
     content: ColumnLayout {
         width: parent ? parent.width : 0
-        spacing: 18
+        spacing: Theme.sm
 
         QQC.Label {
             text: "User info"
-            font.pixelSize: 22
+            font.pixelSize: Theme.text.large
             font.bold: true
             Layout.fillWidth: true
         }
@@ -85,7 +87,7 @@ Modal {
         Button {
             text: "Update User Name"
             Layout.fillWidth: true
-            Layout.preferredHeight: 44
+            Layout.preferredHeight: 34
 
             onClicked: {
                 root.updateUserName(text)
@@ -94,7 +96,7 @@ Modal {
 
         QQC.Label {
             text: "Password"
-            font.pixelSize: 16
+            font.pixelSize: Theme.text.large
             font.bold: true
             Layout.fillWidth: true
         }
@@ -129,7 +131,7 @@ Modal {
         Button {
             text: "Update password"
             Layout.fillWidth: true
-            Layout.preferredHeight: 44
+            Layout.preferredHeight: 34
 
             onClicked: {
                 root.passwordError = false

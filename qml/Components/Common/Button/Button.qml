@@ -1,15 +1,17 @@
 import QtQuick
 import QtQuick.Controls as QQC
 
+import "../../../theme"
+
 QQC.Button {
     id: root
 
     property color primaryColor: "#1976d2"
     property color disabledColor: "#bdbdbd"
     property color hoverColor: "#1565c0"
-    property int radius: 8
+    property int radius: Theme.radiusSize.small
 
-    implicitHeight: 44
+    implicitHeight: 34
     implicitWidth: 120
 
     hoverEnabled: true
@@ -41,7 +43,7 @@ QQC.Button {
         text: root.text
         color: "white"
 
-        font.pixelSize: 14
+        font.pixelSize: Theme.text.normal
         font.bold: true
 
         horizontalAlignment: Text.AlignHCenter

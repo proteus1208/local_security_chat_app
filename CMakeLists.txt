@@ -82,16 +82,22 @@ install(TARGETS LearnQML
     RUNTIME DESTINATION ${CMAKE_INSTALL_BINDIR}
 )
 
-if(QT_VERSION_MAJOR EQUAL 6)
-    qt_finalize_executable(LearnQML)
-endif()
-
-file(GLOB_RECURSE QML_FILES RELATIVE ${CMAKE_CURRENT_SOURCE_DIR}
+file(GLOB_RECURSE RESOURCE_FILES
+    RELATIVE ${CMAKE_CURRENT_SOURCE_DIR}
     CONFIGURE_DEPENDS
-    qml/*
+    qml/*.qml
+    qml/*.qmldir
+    qml/qmldir
+    qml/*.png
+    qml/*.jpg
+    qml/*.ico
 )
 
 qt_add_resources(LearnQML "resources"
     PREFIX "/"
-    FILES ${QML_FILES}
+    FILES ${RESOURCE_FILES}
 )
+
+if(QT_VERSION_MAJOR EQUAL 6)
+    qt_finalize_executable(LearnQML)
+endif()

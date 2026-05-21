@@ -60,9 +60,7 @@ Rectangle {
         //     Layout.preferredHeight: 50
         // }
     }
-    UserInfoDialog {
-        parent: Overlay.overlay
-    }
+    UserInfoDialog {}
 
     ToastView {
         anchors.fill: parent

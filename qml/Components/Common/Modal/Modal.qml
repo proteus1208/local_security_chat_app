@@ -10,6 +10,7 @@ Popup {
     property bool show: false
     property int modalWidth: 320
     property int modalHeight: 320
+    property var background_clicked: () => {}
 
     modal: true
     focus: true
@@ -34,7 +35,16 @@ Popup {
         color: "#55000000"
     }
 
-    background: Item {}
+    background: Rectangle {
+        color: "transparent"
+
+        MouseArea {
+            anchors.fill: parent
+            onClicked: {
+                root.background_clicked()
+            }
+        }
+    }
 
     contentItem: Item {
         Rectangle {

@@ -11,9 +11,11 @@ import "../store"
 Modal {
     id: root
 
-    show: true
+    show: App.userInfoEditModal_show
     modalWidth: 420
     modalHeight: 560
+
+    visible: App.userInfoEditModal_show
 
     property bool passwordError: false
     property string passwordErrorText: ""
@@ -32,6 +34,10 @@ Modal {
 
     function updatePassword(oldPassword, newPassword) {
         Toast.success("Success", "Your password updated")
+    }
+
+    background_clicked: () => {
+        App.openUserInfoEditModal(false)
     }
 
     content: ColumnLayout {

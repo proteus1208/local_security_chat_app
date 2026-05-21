@@ -2,6 +2,7 @@ import QtQuick
 import QtQuick.Layouts
 import "../../Components/Common/Avatar"
 import "../../theme"
+import "../../store"
 
 Rectangle {
     id: userBtn
@@ -35,5 +36,15 @@ Rectangle {
             Layout.alignment: Qt.AlignVCenter
             Layout.rightMargin: padding
         }
+    }
+
+    MouseArea {
+        anchors.fill: parent
+
+        onClicked: {
+            App.openUserInfoEditModal(true);
+        }
+
+        cursorShape: Qt.PointingHandCursor
     }
 }

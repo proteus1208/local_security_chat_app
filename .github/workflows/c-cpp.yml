@@ -1,0 +1,56 @@
+name: C/C++ CI with Qt
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  build-test-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      # 1. Checkout the repo
+      - uses: actions/checkout@v4
+
+      # 2. Install Qt (example for Qt 6 using apt or online installer)
+      - name: Install Qt
+        run: |
+          sudo apt update
+          sudo apt install -y qt6-base-dev qt6-base-dev-tools qt6-qmake
+
+      # 3. Configure the project
+      - name: Configure
+        run: ./configure
+
+      # 4. Build
+      - name: Build
+        run: make -j$(nproc)
+
+      # 5. Run tests
+      - name: Test
+        run: make check
+
+      # 6. Optional: Run distcheck
+      - name: Distcheck
+        run: make distcheck
+
+      # 7. Collect built files and Qt DLLs
+      - name: Collect artifacts
+        run: |
+          mkdir -p artifacts
+          cp -r build/bin/* artifacts/
+          # For Windows runners, copy Qt DLLs from Qt installation
+          # e.g. cp /opt/Qt/6.2.0/gcc_64/bin/*.dll artifacts/
+
+      # 8. Commit built artifacts to a separate branch
+      - name: Push built app
+        run: |
+          git config --global user.name "github-actions"
+          git config --global user.email "actions@github.com"
+          git checkout -b built-artifacts
+          cp -r artifacts/* .
+          git add .
+          git commit -m "Add built Qt app and DLLs"
+          git push -u origin built-artifacts --force
